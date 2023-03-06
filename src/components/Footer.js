@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
-export default function Footer() {
+export default function Footer(props) {
     return (
-        <Rodape>0/4 CONCLUÍDOS</Rodape>
+        <Rodape data-test="footer">{props.concluidas}/8 CONCLUÍDOS</Rodape>
     )
 }
 

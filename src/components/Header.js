@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import zaprecall from '../assets/zaprecall.png';
 
 export default function Header() {
     return (
         <Cabecalho>
-            <img src='../../public/assets/zaprecall.png' />
+            <img src={zaprecall} />
             <h1>ZapRecall</h1>
         </Cabecalho>
     )
