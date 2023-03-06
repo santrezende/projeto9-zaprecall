@@ -23,6 +23,8 @@ export default function FlashCards(props) {
         setDisplayA(false);
         setDisplayG(true);
 
+        props.icons.push(<ion-icon className="green" key={props.contador} name="checkmark-circle"></ion-icon>);
+        props.setIcons(props.icons);
         props.setContador(props.contador + 1);
     }
 
@@ -30,6 +32,8 @@ export default function FlashCards(props) {
         setDisplayA(false);
         setDisplayR(true);
 
+        props.icons.push(<ion-icon className="red" key={props.contador} name="close-circle"></ion-icon>);
+        props.setIcons(props.icons);
         props.setContador(props.contador + 1);
     }
 
@@ -37,6 +41,8 @@ export default function FlashCards(props) {
         setDisplayA(false);
         setDisplayY(true);
 
+        props.icons.push(<ion-icon className="yellow" key={props.contador} name="help-circle"></ion-icon>);
+        props.setIcons(props.icons);
         props.setContador(props.contador + 1);
     }
 

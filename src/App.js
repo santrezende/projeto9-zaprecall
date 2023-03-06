@@ -11,6 +11,9 @@ import React from "react";
 export default function App() {
   const [contadorRespondidas, setContadorRespondidas] = React.useState(0);
   const [telaInicial, setTelaInicial] = React.useState(true);
+  const [icons, setIcons] = React.useState([]);
+
+  let corIcon = '';
 
   const layout = [];
 
@@ -23,6 +26,9 @@ export default function App() {
           resposta={p.answer}
           contador={contadorRespondidas}
           setContador={setContadorRespondidas}
+          setIcons={setIcons}
+          corIcon={corIcon}
+          icons={icons}
           data-test="flashcard"
         />
       </Pergunta>
@@ -35,7 +41,7 @@ export default function App() {
       <TelaInicial telaInicial={telaInicial} setTelaInicial={setTelaInicial} />
       <Header />
       <Questions perguntas={layout} />
-      <Footer concluidas={contadorRespondidas} />
+      <Footer concluidas={contadorRespondidas} icons={icons} corIcon={corIcon} />
     </div>
   );
 }
