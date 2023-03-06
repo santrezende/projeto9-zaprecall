@@ -1,5 +1,6 @@
 import GlobalStyle from "./globalstyle";
 import styled from "styled-components";
+import TelaInicial from "./components/TelaInicial";
 import Header from "./components/Header";
 import Questions from "./components/Questions";
 import Footer from "./components/Footer";
@@ -8,7 +9,8 @@ import cards from "./perguntas"
 import React from "react";
 
 export default function App() {
-  let [contadorRespondidas, setContadorRespondidas] = React.useState(0);
+  const [contadorRespondidas, setContadorRespondidas] = React.useState(0);
+  const [telaInicial, setTelaInicial] = React.useState(true);
 
   const layout = [];
 
@@ -30,6 +32,7 @@ export default function App() {
   return (
     <div>
       <GlobalStyle />
+      <TelaInicial telaInicial={telaInicial} setTelaInicial={setTelaInicial} />
       <Header />
       <Questions perguntas={layout} />
       <Footer concluidas={contadorRespondidas} />
